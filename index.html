@@ -2,502 +2,459 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voluntarios | Navidad con el Corazón 2026</title>
 
-    <meta name="description" content="GRUPO AVASA. Innovación, tecnología y conectividad para México. Conoce ORBIT MOBILE.">
-
-    <meta name="theme-color" content="#101c2d">
-
-    <title>GRUPO AVASA | Innovación y conectividad</title>
-
-    <link rel="stylesheet" href="styles.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --wine:#780d20;
+  --red:#a51d32;
+  --gold:#bd985d;
+  --cream:#fffaf4;
+  --green:#205b40;
+  --text:#302b29;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--text);
+  font-family:Arial,sans-serif;
+}
+.topbar{
+  background:#fff;
+  padding:15px 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  border-bottom:1px solid #eee;
+}
+.avasa{width:210px;max-width:43%;object-fit:contain}
+.campaign-logo{width:280px;max-width:48%;object-fit:contain}
+.hero{
+  background:linear-gradient(130deg,#580b19,#9c1830);
+  color:white;
+  text-align:center;
+  padding:55px 20px;
+}
+.hero h1{
+  font-family:Georgia,serif;
+  font-size:clamp(30px,5vw,48px);
+  margin:0 0 12px;
+}
+.hero p{margin:0;color:#f3dfc4}
+.hero .gold-line{
+  width:75px;height:3px;background:var(--gold);
+  margin:22px auto;
+}
+.container{
+  max-width:850px;
+  margin:40px auto;
+  padding:0 18px;
+}
+.card{
+  background:white;
+  border:1px solid #eee3d6;
+  border-radius:18px;
+  padding:clamp(20px,5vw,42px);
+  box-shadow:0 12px 35px #4b15200d;
+}
+h2{
+  font-family:Georgia,serif;
+  color:var(--wine);
+  font-size:27px;
+  margin:0 0 12px;
+}
+.intro{color:#706864;line-height:1.7}
+.section-title{
+  color:var(--wine);
+  font-weight:bold;
+  margin:30px 0 12px;
+  padding-bottom:9px;
+  border-bottom:1px solid #eee3d6;
+}
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.field{margin-top:17px}
+label.title{
+  display:block;
+  font-weight:bold;
+  font-size:14px;
+  margin-bottom:8px;
+}
+input,select,textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid #ddd5cf;
+  border-radius:9px;
+  background:#fff;
+  font-size:15px;
+  color:var(--text);
+}
+input:focus,select:focus,textarea:focus{
+  outline:2px solid #bd985d55;
+  border-color:var(--gold);
+}
+textarea{min-height:95px;resize:vertical}
+.check-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.check{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  border:1px solid #eee3d6;
+  padding:13px;
+  border-radius:9px;
+  font-size:14px;
+  cursor:pointer;
+}
+.check input{width:auto;margin:2px 0 0}
+.info{
+  background:#f8f2e8;
+  border-left:4px solid var(--gold);
+  padding:16px;
+  border-radius:6px;
+  font-size:13px;
+  line-height:1.6;
+  margin-top:23px;
+}
+.consent{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  font-size:13px;
+  line-height:1.6;
+  margin-top:20px;
+}
+.consent input{width:auto;margin-top:3px}
+button{
+  width:100%;
+  border:0;
+  padding:17px;
+  background:var(--wine);
+  color:white;
+  border-radius:9px;
+  font-size:15px;
+  font-weight:bold;
+  letter-spacing:.5px;
+  cursor:pointer;
+  margin-top:24px;
+}
+button:hover{background:var(--red)}
+button:disabled{opacity:.6;cursor:wait}
+#resultado{
+  display:none;
+  padding:22px;
+  margin-top:22px;
+  background:#edf7ef;
+  border:1px solid #cce4d0;
+  border-radius:12px;
+  text-align:center;
+  line-height:1.6;
+}
+.folio{
+  color:var(--green);
+  font-size:24px;
+  font-weight:bold;
+}
+footer{
+  background:#280a10;
+  color:white;
+  padding:30px 20px;
+  text-align:center;
+  line-height:1.8;
+}
+.footer-logo{width:190px;max-width:70%;margin-bottom:15px}
+@media(max-width:600px){
+  .topbar{padding:12px;gap:10px}
+  .avasa{width:45%}
+  .campaign-logo{width:52%}
+  .grid,.check-grid{grid-template-columns:1fr}
+  .hero{padding:42px 16px}
+}
+</style>
 </head>
 
 <body>
 
-    <!-- BARRA SUPERIOR -->
-    <div class="announcement">
-        INNOVACIÓN · TECNOLOGÍA · CONECTIVIDAD
-    </div>
-
-    <!-- ENCABEZADO -->
-    <header class="site-header">
-
-        <a href="#inicio" class="brand">
-            <span class="brand-mark">A</span>
-
-            <span class="brand-name">
-                GRUPO <span>AVASA</span>
-            </span>
-        </a>
-
-        <button class="menu-toggle" aria-label="Abrir menú">
-            ☰
-        </button>
-
-        <nav class="nav">
-            <a href="#grupo">Grupo AVASA</a>
-            <a href="#orbit">Orbit Mobile</a>
-            <a href="#proyecto">El proyecto</a>
-            <a href="#actualizaciones">Actualizaciones</a>
-            <a href="#contacto" class="nav-cta">Contacto ↗</a>
-        </nav>
-
-    </header>
-
-    <main>
-
-        <!-- PORTADA -->
-        <section class="hero" id="inicio">
-
-            <div class="hero-content">
-
-                <div class="eyebrow light">
-                    GRUPO AVASA · MÉXICO
-                </div>
-
-                <h1>
-                    Ideas que avanzan.
-                    <em>Conexiones que</em>
-                    transforman.
-                </h1>
-
-                <p>
-                    Impulsamos proyectos empresariales con visión
-                    de futuro, innovación tecnológica y nuevas
-                    oportunidades para México.
-                </p>
-
-                <div class="hero-actions">
-
-                    <a href="#grupo" class="button button-gold">
-                        Conoce Grupo AVASA →
-                    </a>
-
-                    <a href="#orbit" class="text-link light-link">
-                        Descubre ORBIT MOBILE ↗
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="hero-aside">
-                <div class="orbit-symbol">
-                    <span></span>
-                </div>
-
-                <p>UNA VISIÓN EN MOVIMIENTO</p>
-            </div>
-
-        </section>
-
-
-        <!-- GRUPO AVASA -->
-        <section class="section intro" id="grupo">
-
-            <div class="section-kicker">
-                01 — QUIÉNES SOMOS
-            </div>
-
-            <div class="intro-layout">
-
-                <h2>
-                    Una visión empresarial
-                    <em>con mirada al futuro.</em>
-                </h2>
-
-                <div class="intro-copy">
-
-                    <p class="lead">
-                        GRUPO AVASA desarrolla iniciativas empresariales
-                        orientadas a la innovación tecnológica y al
-                        crecimiento de los servicios de conectividad
-                        en México.
-                    </p>
-
-                    <p>
-                        Creemos en las ideas que se convierten en
-                        proyectos, en la evolución constante y en el
-                        valor de acercar nuevas soluciones a las
-                        personas y organizaciones.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="values">
-
-                <article>
-                    <span>01</span>
-                    <h3>Innovación</h3>
-                    <p>Exploramos nuevas soluciones y oportunidades.</p>
-                </article>
-
-                <article>
-                    <span>02</span>
-                    <h3>Tecnología</h3>
-                    <p>Impulsamos iniciativas con enfoque digital.</p>
-                </article>
-
-                <article>
-                    <span>03</span>
-                    <h3>Conectividad</h3>
-                    <p>Trabajamos para acercar servicios de comunicación.</p>
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ORBIT MOBILE -->
-        <section class="orbit-section" id="orbit">
-
-            <div class="orbit-top">
-
-                <div class="orbit-logo-card">
-                    <img
-                        src="assets/orbit-mobile-logo.jpg"
-                        alt="Logotipo oficial ORBIT MOBILE"
-                    >
-                </div>
-
-                <div class="orbit-tag">
-                    UNA NUEVA FORMA<br>
-                    DE ESTAR CONECTADOS
-                </div>
-
-            </div>
-
-            <div class="orbit-main">
-
-                <div class="orbit-copy">
-
-                    <h2>
-                        Tu mundo.
-                        <em>En conexión.</em>
-                    </h2>
-
-                    <p>
-                        ORBIT MOBILE es un proyecto de
-                        telecomunicaciones que busca establecer
-                        una propuesta de conectividad móvil con
-                        alcance nacional en México, mediante
-                        tecnología moderna, soluciones digitales
-                        y precios accesibles.
-                    </p>
-
-                    <a href="#proyecto" class="button button-navy">
-                        Explorar el proyecto →
-                    </a>
-
-                </div>
-
-                <div class="phone-scene">
-
-                    <div class="phone">
-
-                        <div class="phone-screen">
-
-                            <div class="screen-logo">
-                                ORBIT
-                                <span>MOBILE</span>
-                            </div>
-
-                            <div class="screen-orbit"></div>
-
-                            <small>
-                                CONNECTED TO WHAT MATTERS
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                    <div class="floating-chip">
-                        eSIM
-                        <span>DIGITAL</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="orbit-foot">
-                <span>TECNOLOGÍA MÓVIL</span>
-                <span>DISEÑADO PARA MÉXICO</span>
-                <span>ORBIT MOBILE · 2027</span>
-            </div>
-
-        </section>
-
-
-        <!-- PROYECTO -->
-        <section class="section project" id="proyecto">
-
-            <div class="section-kicker">
-                02 — EL PROYECTO
-            </div>
-
-            <div class="project-heading">
-
-                <h2>
-                    Una evolución
-                    <em>por etapas.</em>
-                </h2>
-
-                <p>
-                    El desarrollo contempla una primera etapa
-                    digital y una expansión gradual de alternativas
-                    de conectividad.
-                </p>
-
-            </div>
-
-            <div class="stages">
-
-                <article class="stage">
-                    <div class="stage-number">01</div>
-
-                    <div class="stage-content">
-                        <span>PRIMERA ETAPA</span>
-
-                        <h3>Conectividad eSIM</h3>
-
-                        <p>
-                            Inicio con servicios eSIM para activar
-                            una línea móvil de manera digital en
-                            dispositivos compatibles.
-                        </p>
-
-                        <b>EN DESARROLLO</b>
-                    </div>
-                </article>
-
-                <article class="stage">
-                    <div class="stage-number">02</div>
-
-                    <div class="stage-content">
-                        <span>EXPANSIÓN</span>
-
-                        <h3>SIM tradicional</h3>
-
-                        <p>
-                            Incorporación gradual de tarjetas SIM
-                            tradicionales para ampliar las
-                            alternativas de servicio y distribución.
-                        </p>
-
-                        <b>ETAPA POSTERIOR</b>
-                    </div>
-                </article>
-
-                <article class="stage">
-                    <div class="stage-number">03</div>
-
-                    <div class="stage-content">
-                        <span>COMERCIALIZACIÓN</span>
-
-                        <h3>Mercado nacional</h3>
-
-                        <p>
-                            Desarrollo de canales de comercialización
-                            para clientes individuales y el sector
-                            mayorista.
-                        </p>
-
-                        <b>EN PLANEACIÓN</b>
-                    </div>
-                </article>
-
-            </div>
-
-            <!-- RED -->
-            <div class="network-note">
-
-                <div>
-                    <span>INFRAESTRUCTURA DE RED</span>
-
-                    <h3>
-                        Tecnología de red de Altán Redes
-                    </h3>
-
-                    <p>
-                        La operación contempla trabajar bajo su
-                        infraestructura, conforme a los acuerdos
-                        y condiciones técnicas y comerciales
-                        correspondientes.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- AVANCE -->
-        <section class="progress-section" id="actualizaciones">
-
-            <div class="progress-inner">
-
-                <div>
-
-                    <div class="eyebrow light">
-                        AVANCE DEL PROYECTO
-                    </div>
-
-                    <h2>
-                        Estamos construyendo
-                        <em>lo que sigue.</em>
-                    </h2>
-
-                    <p>
-                        El proyecto continúa en etapa de desarrollo,
-                        planeación y preparación operativa.
-                    </p>
-
-                </div>
-
-                <div class="progress-card">
-
-                    <div class="progress-top">
-                        <span>AVANCE ESTIMADO</span>
-                        <strong>56%</strong>
-                    </div>
-
-                    <div class="progress-track">
-                        <span></span>
-                    </div>
-
-                    <div class="progress-bottom">
-                        DESARROLLO DEL PROYECTO
-                    </div>
-
-                    <p>
-                        Porcentaje informado en el comunicado
-                        corporativo del 22 de noviembre de 2026.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- LANZAMIENTO -->
-        <section class="section launch">
-
-            <div class="section-kicker">
-                03 — PRÓXIMO LANZAMIENTO
-            </div>
-
-            <div class="launch-layout">
-
-                <div>
-
-                    <h2>
-                        El futuro de tu
-                        <em>conexión comienza aquí.</em>
-                    </h2>
-
-                    <p>
-                        La disponibilidad inicial de ORBIT MOBILE
-                        está prevista para el tercer trimestre de 2027.
-                    </p>
-
-                </div>
-
-                <div class="launch-date">
-
-                    <span>LANZAMIENTO ESTIMADO</span>
-
-                    <strong>Q3 / 2027</strong>
-
-                    <small>
-                        Tercer trimestre de 2027
-                    </small>
-
-                </div>
-
-            </div>
-
-            <p class="legal-note">
-                La fecha estimada está sujeta a la conclusión
-                de los procesos legales, técnicos y operativos
-                correspondientes. Las fechas, servicios,
-                cobertura y condiciones comerciales podrán
-                estar sujetos a modificaciones.
-            </p>
-
-        </section>
-
-
-        <!-- CONTACTO -->
-        <section class="contact-section" id="contacto">
-
-            <div class="contact-content">
-
-                <div class="eyebrow light">
-                    SIGAMOS EN CONTACTO
-                </div>
-
-                <h2>
-                    Las grandes ideas
-                    <em>se conectan.</em>
-                </h2>
-
-                <p>
-                    Conoce los próximos avances, información
-                    institucional y novedades de nuestros proyectos.
-                </p>
-
-                <a
-                    href="https://grupoavasa.mx/orbitmobile"
-                    class="button button-gold"
-                >
-                    Portal ORBIT MOBILE ↗
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- PIE DE PÁGINA -->
-    <footer class="footer">
-
-        <a href="#inicio" class="brand">
-            <span class="brand-mark">A</span>
-
-            <span class="brand-name">
-                GRUPO <span>AVASA</span>
-            </span>
-        </a>
-
-        <div class="footer-center">
-            INNOVACIÓN · TECNOLOGÍA · CONECTIVIDAD
-        </div>
-
-        <div class="footer-right">
-            © <span id="year">2026</span>
-            GRUPO AVASA. TODOS LOS DERECHOS RESERVADOS.
-        </div>
-
-    </footer>
-
-
-    <script src="script.js"></script>
+<nav class="topbar">
+  <img class="avasa"
+       src="assets/logo-grupo-avasa.png"
+       alt="Grupo AVASA">
+  <img class="campaign-logo"
+       src="assets/logo-navidad-corazon.png"
+       alt="Navidad con el Corazón">
+</nav>
+
+<header class="hero">
+  <h1>¡Súmate como voluntario!</h1>
+  <div class="gold-line"></div>
+  <p>Navidad con el Corazón · Primera edición 2026</p>
+  <p>Ciudad Juárez, Chihuahua</p>
+</header>
+
+<main class="container">
+<section class="card">
+
+<h2>Registro de voluntarios</h2>
+<p class="intro">
+Queremos contar contigo. Participa en la recepción de donaciones,
+los Centros de Acopio y la entrega de apoyos navideños.
+Tu tiempo y compromiso pueden hacer la diferencia.
+</p>
+
+<form id="formulario">
+
+<div class="section-title">01. Datos personales</div>
+
+<div class="field">
+<label class="title">Nombre completo *</label>
+<input name="nombre" required maxlength="120"
+autocomplete="name">
+</div>
+
+<div class="grid">
+<div class="field">
+<label class="title">Edad *</label>
+<input name="edad" type="number" min="15"
+max="100" required>
+</div>
+<div class="field">
+<label class="title">Teléfono *</label>
+<input name="telefono" type="tel"
+maxlength="20" required autocomplete="tel">
+</div>
+</div>
+
+<div class="field">
+<label class="title">Correo electrónico *</label>
+<input name="correo" type="email"
+maxlength="150" required autocomplete="email">
+</div>
+
+<div class="field">
+<label class="title">Colonia de residencia *</label>
+<input name="colonia" required maxlength="100">
+</div>
+
+<div class="section-title">02. Áreas de participación</div>
+<p class="intro">Puedes seleccionar varias áreas.</p>
+
+<div class="check-grid">
+<label class="check">
+<input type="checkbox" name="areas"
+value="Centros de Acopio (CDA)">
+Centros de Acopio (CDA)
+</label>
+<label class="check">
+<input type="checkbox" name="areas"
+value="Entrega de apoyos">
+Entrega de apoyos
+</label>
+<label class="check">
+<input type="checkbox" name="areas"
+value="Recepción y clasificación">
+Recepción y clasificación
+</label>
+<label class="check">
+<input type="checkbox" name="areas"
+value="Inventario">
+Inventario de donaciones
+</label>
+<label class="check">
+<input type="checkbox" name="areas"
+value="Preparación de paquetes">
+Preparación de paquetes
+</label>
+<label class="check">
+<input type="checkbox" name="areas"
+value="Logística">
+Logística
+</label>
+</div>
+
+<div class="section-title">03. Disponibilidad</div>
+
+<div class="field">
+<label class="title">¿Cuándo puedes participar? *</label>
+<select name="disponibilidad" required>
+<option value="">Selecciona disponibilidad</option>
+<option>Entre semana</option>
+<option>Fines de semana</option>
+<option>Ambos</option>
+<option>Horarios por confirmar</option>
+</select>
+</div>
+
+<div class="field">
+<label class="title">Experiencia o habilidades</label>
+<textarea name="experiencia" maxlength="500"
+placeholder="Experiencia en voluntariado, organización, atención a personas..."></textarea>
+</div>
+
+<div class="section-title">04. Contacto de emergencia</div>
+
+<div class="field">
+<label class="title">Nombre y teléfono *</label>
+<input name="emergencia" required maxlength="180"
+placeholder="Nombre completo y número telefónico">
+</div>
+
+<div class="info">
+<strong>Participación de menores de edad</strong><br>
+Las personas menores de 18 años deberán contar con
+autorización de su madre, padre o tutor y cumplir las
+medidas de protección antes de participar presencialmente.
+El registro por sí solo no autoriza su participación.
+</div>
+
+<label class="consent">
+<input type="checkbox" name="acepta" required>
+<span>
+Declaro que la información proporcionada es correcta y
+acepto el tratamiento de mis datos para gestionar mi
+registro, de acuerdo con el aviso de privacidad de la campaña.
+</span>
+</label>
+
+<button type="submit" id="enviar">
+ENVIAR MI REGISTRO
+</button>
+
+</form>
+
+<div id="resultado" role="status" aria-live="polite"></div>
+
+</section>
+</main>
+
+<footer>
+<img class="footer-logo"
+src="assets/logo-navidad-corazon.png"
+alt="Navidad con el Corazón">
+<div><strong>Impulsado por Grupo AVASA</strong></div>
+<div>Compartimos esperanza, multiplicamos oportunidades.</div>
+<div>Ciudad Juárez, Chihuahua · 2026</div>
+</footer>
+
+<iframe name="envio_oculto" id="envio_oculto"
+style="display:none"></iframe>
+
+<script>
+const URL_SCRIPT =
+"https://script.google.com/macros/s/AKfycbybSp25g8kRdOrk90CQ1zdLrqowOjEfdDvKlhGvw__GHQj434D66c0gpV8aKJXySA7W4Q/exec";
+
+const formulario = document.getElementById("formulario");
+const boton = document.getElementById("enviar");
+const resultado = document.getElementById("resultado");
+const iframe = document.getElementById("envio_oculto");
+
+let esperando = false;
+let tiempoEspera;
+
+window.addEventListener("message", function(event) {
+  if (event.source !== iframe.contentWindow) return;
+  if (!esperando) return;
+
+  const data = event.data;
+
+  if (!data || typeof data.success !== "boolean") return;
+
+  esperando = false;
+  clearTimeout(tiempoEspera);
+  boton.disabled = false;
+  boton.textContent = "ENVIAR MI REGISTRO";
+
+  resultado.style.display = "block";
+
+  if (data.success) {
+    resultado.innerHTML = `
+      <h3>¡Gracias por sumarte!</h3>
+      <p>Tu solicitud fue recibida correctamente.</p>
+      <p>Tu folio de registro:</p>
+      <div class="folio"></div>
+      <p>Tu solicitud está pendiente de revisión.
+      Nuestro equipo se pondrá en contacto contigo.</p>
+    `;
+    resultado.querySelector(".folio").textContent = data.folio;
+    formulario.reset();
+  } else {
+    resultado.textContent =
+      data.message || "No fue posible registrar tu solicitud.";
+  }
+
+  resultado.scrollIntoView({behavior:"smooth"});
+});
+
+formulario.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  if (esperando) return;
+
+  const areas = [
+    ...formulario.querySelectorAll('input[name="areas"]:checked')
+  ].map(elemento => elemento.value);
+
+  if (areas.length === 0) {
+    alert("Selecciona al menos un área de participación.");
+    return;
+  }
+
+  const formData = new FormData(formulario);
+  const datos = Object.fromEntries(formData.entries());
+
+  datos.areas = areas.join(", ");
+  datos.acepta = formulario.acepta.checked;
+
+  if (Number(datos.edad) < 18) {
+    alert(
+      "Tu registro quedará sujeto a autorización de tu madre, padre o tutor antes de participar presencialmente."
+    );
+  }
+
+  const envio = document.createElement("form");
+  envio.method = "POST";
+  envio.action = URL_SCRIPT;
+  envio.target = "envio_oculto";
+
+  const campo = document.createElement("input");
+  campo.type = "hidden";
+  campo.name = "datos";
+  campo.value = JSON.stringify(datos);
+
+  envio.appendChild(campo);
+  document.body.appendChild(envio);
+
+  esperando = true;
+  boton.disabled = true;
+  boton.textContent = "ENVIANDO...";
+
+  resultado.style.display = "none";
+
+  envio.submit();
+  envio.remove();
+
+  tiempoEspera = setTimeout(() => {
+    if (!esperando) return;
+
+    esperando = false;
+    boton.disabled = false;
+    boton.textContent = "ENVIAR MI REGISTRO";
+
+    resultado.style.display = "block";
+    resultado.textContent =
+      "No recibimos confirmación. Verifica con el equipo antes de volver a enviar para evitar registros duplicados.";
+  }, 25000);
+});
+</script>
 
 </body>
 </html>
